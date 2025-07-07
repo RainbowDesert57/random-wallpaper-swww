@@ -4,20 +4,22 @@ using namespace std;
 int main() {
 	//random number each time the program runs
 //intro
-cout<<"Default wallpaper directory: ~/wallpapers"<<endl<<"Change directory if something else."<<endl<<"list the wallpaper names for random wallpapers. NOTE: will be automatic in the future"
-cout<<"██╗    ██╗ █████╗ ██╗     ██╗     ██████╗  █████╗ ██████╗ ███████╗██████╗";
-cout<<"██║    ██║██╔══██╗██║     ██║     ██╔══██╗██╔══██╗██╔══██╗██╔════╝██╔══██╗";
-cout<<"██║ █╗ ██║███████║██║     ██║     ██████╔╝███████║██████╔╝█████╗  ██████╔╝";
-cout<<"██║███╗██║██╔══██║██║     ██║     ██╔═══╝ ██╔══██║██╔═══╝ ██╔══╝  ██╔══██╗";
-cout<<"╚███╔███╔╝██║  ██║███████╗███████╗██║     ██║  ██║██║     ███████╗██║  ██║";
-cout<<" ╚══╝╚══╝ ╚═╝  ╚═╝╚══════╝╚══════╝╚═╝     ╚═╝  ╚═╝╚═╝     ╚══════╝╚═╝  ╚═╝";
-cout<<"1. Choose a wallpaper";
-cout<<"2. Random wallpaper"
-
-
-	srand(time(0));
+cout<<"Default wallpaper directory: ~/wallpapers"<<endl<<"Change directory if something else."<<endl<<"list the wallpaper names for random wallpapers. NOTE: will be automatic in the future"<<endl<<endl;
+cout<<"██╗    ██╗ █████╗ ██╗     ██╗     ██████╗  █████╗ ██████╗ ███████╗██████╗"<<endl;
+cout<<"██║    ██║██╔══██╗██║     ██║     ██╔══██╗██╔══██╗██╔══██╗██╔════╝██╔══██╗"<<endl;
+cout<<"██║ █╗ ██║███████║██║     ██║     ██████╔╝███████║██████╔╝█████╗  ██████╔╝"<<endl;
+cout<<"██║███╗██║██╔══██║██║     ██║     ██╔═══╝ ██╔══██║██╔═══╝ ██╔══╝  ██╔══██╗"<<endl;
+cout<<"╚███╔███╔╝██║  ██║███████╗███████╗██║     ██║  ██║██║     ███████╗██║  ██║"<<endl;
+cout<<" ╚══╝╚══╝ ╚═╝  ╚═╝╚══════╝╚══════╝╚═╝     ╚═╝  ╚═╝╚═╝     ╚══════╝╚═╝  ╚═╝"<<endl<<endl<<endl;
+cout<<"1. Choose a wallpaper"<<endl;
+cout<<"2. Random wallpaper"<<endl;
+string choice;
+cin>>choice;
+srand(time(0));
 	int randRange = 14; // 0 to randRange
 	int randNum = (rand() % randRange) + 1;
+if (choice == "Random" || choice == "random" || choice == "random wallpaper" || choice == "Random wallpaper" || choice == "Random Wallpaper" || choice == "2") {
+	
 	if (randNum == 1) {
 		system("swww img ~/wallpapers/astronaut.jpg"); //wallpaper output
 	}
@@ -62,4 +64,5 @@ cout<<"2. Random wallpaper"
 	}
 	cout<<"Changing To A Random Wallpaper..."<<endl;
 	cout<<"Exitting..."<<endl<<endl;
+}
 }
